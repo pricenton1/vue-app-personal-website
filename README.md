@@ -1,4 +1,4 @@
-# vue-app
+# vue-app-personal-website
 
 ## Project setup
 ```
@@ -8,6 +8,11 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+```
+### Run file.json
+```
+EXAMPLE
+json-server dataProfile.json
 ```
 
 ### Compiles and minifies for production

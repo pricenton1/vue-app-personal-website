@@ -1,0 +1,121 @@
+{
+    "person":{
+        "firstname":"Antony",
+        "lastname":"Mirasandy",
+        "nationality":"Indonesia",
+        "image_person":"https://i.ibb.co/zNqqtk8/tony-2-modified.png",
+        "about":"Hello Minna-san, thank you for visiting my website, my name is Antony Mirasandy born in tangerang, Indonesia. At this time I want to focus on becoming a software engineer and learn more about several programming languages, frameworks that are currently used, and make several projects for exercise",
+        "education":[
+            {
+                "type":"BootCamp IT",
+                "name":"EnigmaCamp",
+                "major":"Fullstack Developer",
+                "date":"2020"
+            },
+            {
+                "type":"STMIK",
+                "name":"NUSA MANDIRI Jakarta",
+                "major":"Bachelor of Computer Information System",
+                "date":"2019"
+            },
+            {
+                "type":"University",
+                "name":"BSI",
+                "major":"Diploma Degree Information Systems / Web Programming",
+                "date":"2015-2019"
+            },
+            {
+                "type":"Vocational School",
+                "name":"YADIKA 5 Pondok Aren",
+                "major":"Computer and Network Engineering",
+                "date":"2011-2014"
+            }
+        ],
+        "experience":[
+            {
+                "title":"Backend Dev at Bussan Auto Finnance",
+                "position":"Staff / Outsource",
+                "date":"2021-Right Now",
+                "desc":"",
+                "image":""
+            },
+            {
+                "title":"Social Project PPPM Nusa Mandiri",
+                "position":"Committee",
+                "date":"2018",
+                "desc":"",
+                "image":""
+            },
+            {
+                "title":"Social Project at SMP SABILUNA",
+                "position":"Chairman",
+                "date":"2017",
+                "desc":"",
+                "image":""
+            },
+            {
+                "title":"Daily Worker at PHD",
+                "position":"Staff",
+                "date":"2014-2018",
+                "desc":"",
+                "image":""
+            }
+        ],
+        "skills":[
+            {
+                "name":"Golang",
+                "icon":"https://i.ibb.co/TKx61Wq/golang.png"
+            },
+            {
+                "name":"MySQL",
+                "icon":"https://i.ibb.co/ynNjQxp/mysql.png"
+            },
+            {
+                "name":"PostgreSQL",
+                "icon":"https://i.ibb.co/gD43ycw/postgre-Sql.png"
+            },
+            {
+                "name":"ReactJS",
+                "icon":"https://i.ibb.co/jrDr6ZH/react.png"
+            },
+            {
+                "name":"VueJS",
+                "icon":"https://i.ibb.co/7gTyQff/vue.png"
+            }
+        ],
+        "portfolio":[
+            {
+                "title":"Simple REST API CRUD ( Golang )",
+                "desc":"Develop simple REST API with Golang, MUX as library / framework router and using MySQL as database",
+                "link":"https://github.com/pricenton1/logistics",
+                "icon":"https://i.ibb.co/TKx61Wq/golang.png"
+            }
+        ],
+        "activities":[
+            {
+                "title":"Final project presentation on EnigmaCamp",
+                "desc":"The presentation of the pick my food application, where someone can order food & beverage anywhere and anytime, the application was developed by didin, apin as a mobile developer, angga as a frontend web developer, and antony, benyamin as a backend developer",
+                "date":"09/21/2020",
+                "image":"https://i.ibb.co/rMgfY0V/final-Project-Pick-My-Food.jpg"
+            },
+            {
+                "title":"Final project presentation on EnigmaCamp",
+                "desc":"The presentation of the pick my food application, where someone can order food & beverage anywhere and anytime, the application was developed by didin, apin as a mobile developer, angga as a frontend web developer, and antony, benyamin as a backend developer",
+                "date":"09/21/2020",
+                "image":"https://i.ibb.co/rMgfY0V/final-Project-Pick-My-Food.jpg"
+            },
+            {
+                "title":"Final project presentation on EnigmaCamp",
+                "desc":"The presentation of the pick my food application, where someone can order food & beverage anywhere and anytime, the application was developed by didin, apin as a mobile developer, angga as a frontend web developer, and antony, benyamin as a backend developer",
+                "date":"09/21/2020",
+                "image":"https://i.ibb.co/rMgfY0V/final-Project-Pick-My-Food.jpg"
+            },
+            {
+                "title":"Final project presentation on EnigmaCamp",
+                "desc":"The presentation of the pick my food application, where someone can order food & beverage anywhere and anytime, the application was developed by didin, apin as a mobile developer, angga as a frontend web developer, and antony, benyamin as a backend developer",
+                "date":"09/21/2020",
+                "image":"https://i.ibb.co/rMgfY0V/final-Project-Pick-My-Food.jpg"
+            }
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+
+// navbar breadcrumb
+$text-strong : black;
+$breadcrumb-item-color:$text-strong;
+$breadcrumb-item-active-color:black;
+$breadcrumb-item-hover-color:rgb(0, 162, 255);
+
+// box 
+$box-padding:10px;
+
+
+//footer section
+
+$background:hsl(195, 20%, 96%);
+$tabs-toggle-link-hover-background-color:$background;
+$tabs-link-color:white;
+$tabs-link-hover-color:rgb(22, 24, 23);
+
+@mixin hoverSosmed($name) {
+   @if $name == whatsapp {
+       $tabs-link-color:green;
+   }
+}
+
+li {
+    .whatsapp{
+        $tabs-link-color:green;
+    }
+}
+
+
+
+
+@import "~bulma";
