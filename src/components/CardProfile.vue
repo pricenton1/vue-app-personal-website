@@ -98,7 +98,6 @@ export default {
   },
   methods: {
     getAge() {
-      setTimeout(()=>{
         let today = new Date();
         let birthDate = new Date("07/31/1996");
         let result = today.getFullYear() - birthDate.getFullYear();
@@ -107,8 +106,6 @@ export default {
           result--;
         }
         this.age = result;
-      },3000)
-      
     },
 
     getData() {
@@ -127,8 +124,10 @@ export default {
     },
   },
   async created() {
-    this.getData();
-    this.getAge();
+    setTimeout(()=>{
+      this.getData();
+      this.getAge();
+    },3000)
   },
   mounted() {},
 };

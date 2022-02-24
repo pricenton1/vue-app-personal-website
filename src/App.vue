@@ -33,8 +33,6 @@ export default {
   data: function () {
     return {
       data: "Home",
-      count: Number,
-      time:"",
     };
   },
 };

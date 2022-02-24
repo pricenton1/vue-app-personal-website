@@ -2,8 +2,6 @@
   <section class="section has-background-dark p-1">
     <div class="content has-text-centered">
       <!-- <ColumnContent /> -->
-      
-
       <MedSos />
       <div class="box mt-6">
         <p>&copy; 2022 <a href="#">@mirasandyantony</a></p>

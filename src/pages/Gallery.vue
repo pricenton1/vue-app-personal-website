@@ -1,10 +1,20 @@
 <template>
   <div>
-    <h2 class="title is-3">Activities</h2>
+    <vue-skeleton-loader
+      v-if="showTitle == false"
+      class="mx-auto my-2"
+      type="rect"
+      :width="300"
+      :height="40"
+      animation="fade"
+      :rounded="true"
+    />
+
+    <h2 class="title is-3" v-else>Activities</h2>
     <div
       class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly is-align-items-flex-start mb-2"
     >
-      <CardImage  v-for="(activity, index) in activities" :key="index" v-bind:activity="activity" />
+      <CardImage v-for="(activity, index) in activities" :key="index" v-bind:activity="activity" />
     </div>
   </div>
 </template>
@@ -21,6 +31,7 @@ export default {
   data() {
     return {
       activities: [],
+      showTitle: false
     };
   },
    methods: {
@@ -37,6 +48,9 @@ export default {
     },
   },
   created(){
+    setTimeout(()=>{
+      this.showTitle = true
+    },3000)
     this.getActivity();
   },
   mounted(){
