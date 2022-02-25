@@ -6,54 +6,101 @@
     v-on:submit.prevent="submitForm"
   >
     <div class="field">
-      <label class="label has-text-left">Name</label>
-      <div class="control">
-        <input
-          class="input is-info"
-          type="text"
-          name="nama"
-          v-model="nama"
-          placeholder="Write Your Name Here..."
-        />
-      </div>
-      <div class="is-danger mt-2" v-if="error.nama">
-        <p class="has-text-danger">{{ error.nama }}</p>
+      <vue-skeleton-loader 
+      v-if="showName == false"
+      class="mx-auto mt-3"
+      type="rect"
+      :width="670"
+      :height="50"
+      animation="fade"
+      :rounded="true"
+      />
+
+      <div v-else>
+        <label class="label has-text-left">Name</label>
+        <div class="control">
+          <input
+            class="input is-info"
+            type="text"
+            name="nama"
+            v-model="nama"
+            placeholder="Write Your Name Here..."
+          />
+        </div>
+        <div class="is-danger mt-2" v-if="error.nama">
+          <p class="has-text-danger">{{ error.nama }}</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="field">
+      <vue-skeleton-loader
+      v-if="showEmail == false"
+      class="mx-auto mt-3"
+      type="rect"
+      :width="670"
+      :height="50"
+      animation="fade"
+      :rounded="true"
+      />
+
+      <div v-else>
+        <label class="label has-text-left">Email</label>
+        <div class="control">
+          <input
+            class="input is-info"
+            type="email"
+            name="email"
+            v-model="email"
+            placeholder="Example@gmail.com"
+          />
+        </div>
+        <div class="is-danger mt-2" v-if="error.email">
+          <p class="has-text-danger">{{ error.email }}</p>
+        </div>
       </div>
     </div>
 
     <div class="field">
-      <label class="label has-text-left">Email</label>
-      <div class="control">
-        <input
-          class="input is-info"
-          type="email"
-          name="email"
-          v-model="email"
-          placeholder="Example@gmail.com"
-        />
-      </div>
-      <div class="is-danger mt-2" v-if="error.email">
-        <p class="has-text-danger">{{ error.email }}</p>
+      <vue-skeleton-loader
+      v-if="showMessage == false"
+      class="mx-auto mt-3"
+      type="rect"
+      :width="670"
+      :height="100"
+      animation="fade"
+      :rounded="true"
+      />
+
+      <div v-else>
+        <label class="label has-text-left">Message</label>
+        <div class="control">
+          <textarea
+            class="textarea is-info"
+            name="message"
+            id="message"
+            v-model="message"
+            placeholder="Comment Here..."
+          ></textarea>
+        </div>
+        <div class="error mt-2" v-if="error.message">
+          <p class="has-text-danger">{{ error.message }}</p>
+        </div>
       </div>
     </div>
 
-    <div class="field">
-      <label class="label has-text-left">Message</label>
-      <div class="control">
-        <textarea
-          class="textarea is-info"
-          name="message"
-          id="message"
-          v-model="message"
-          placeholder="Comment Here..."
-        ></textarea>
-      </div>
-      <div class="error mt-2" v-if="error.message">
-        <p class="has-text-danger">{{ error.message }}</p>
-      </div>
-    </div>
     <div class="field is-grouped">
-      <div class="control">
+      <vue-skeleton-loader
+      v-if="showButton == false"
+      class="ml-2 mt-2"
+      type="rect"
+      :width="120"
+      :height="50"
+      animation="fade"
+      :rounded="true"
+      />
+
+      <div class="control" v-else>
         <button
           class="button is-info is-outlined is-rounded"
           v-bind:class="{ 'is-loading': loading }"
@@ -81,7 +128,11 @@ export default {
         email: "",
         message: "",
       },
-      loading: false,
+      loading:false,
+      showName: false,
+      showEmail: false,
+      showMessage: false,
+      showButton: false
     };
   },
   methods: {
@@ -142,6 +193,14 @@ export default {
       }
     },
   },
+  created(){
+    setTimeout(()=>{
+      this.showName = true
+      this.showEmail = true
+      this.showMessage = true
+      this.showButton = true
+    },3000)
+  }
 };
 </script>
 
