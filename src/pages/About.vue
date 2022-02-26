@@ -1,13 +1,33 @@
 <template>
   <div class="container">
-    <!-- <h1>This is {{ msg2 }}</h1> -->
     <figure class="image is-128x128 mx-auto my-2">
+      <vue-skeleton-loader
+        v-if="show.image == false"
+        class="mx-auto"
+        type="circle"
+        :width="128"
+        :height="128"
+        animation="fade"
+      />
       <img
+        v-else
         class="is-rounded has-background-info"
         :src="person.image"
       />
     </figure>
-    <h3 class="title is-4">{{person.firstname}} {{person.lastname}}</h3>
+    <div>
+      <vue-skeleton-loader
+        v-if="show.fullname == false"
+        class="mx-auto"
+        type="rect"
+        :width="200"
+        :height="40"
+        animation="fade"
+        :rounded="true"
+      />
+      <h3 v-else class="title is-4">{{person.firstname}} {{person.lastname}}</h3>
+    </div>
+    
 
     <CommonSection :about="person.about"/>
 
@@ -40,7 +60,11 @@ export default {
       },
       educations: [],
       experiences: [],
-      skills : []
+      skills : [],
+      show:{
+        image:false,
+        fullname:false
+      }
     };
   },
   methods: {
@@ -64,6 +88,10 @@ export default {
 
   },
   created(){
+    setTimeout(()=>{
+      this.show.image = true
+      this.show.fullname = true
+    },3000)
     this.getData();
   }
 };

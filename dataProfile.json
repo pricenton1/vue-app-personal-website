@@ -4,7 +4,7 @@
         "lastname":"Mirasandy",
         "nationality":"Indonesia",
         "image_person":"https://i.ibb.co/zNqqtk8/tony-2-modified.png",
-        "about":"Hello Minna-san, thank you for visiting my website, my name is Antony Mirasandy born in tangerang, Indonesia. At this time I want to focus on becoming a software engineer and learn more about several programming languages, frameworks that are currently used, and make several projects for exercise",
+        "about":"Hello Minna-san, thank you for visiting my website, my name is Antony Mirasandy born in Tangerang, Indonesia. At this time i want to focus on becoming a software engineer and learn more about several programming languages, frameworks that are currently used, and make several projects for exercise",
         "education":[
             {
                 "type":"BootCamp IT",
@@ -33,8 +33,8 @@
         ],
         "experience":[
             {
-                "title":"Backend Dev at Bussan Auto Finnance",
-                "position":"Staff / Outsource",
+                "title":"PT. Bussan Auto Finnance",
+                "position":"Backend Developer",
                 "date":"2021-Right Now",
                 "desc":"",
                 "image":""

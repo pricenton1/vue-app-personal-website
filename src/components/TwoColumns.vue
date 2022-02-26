@@ -2,78 +2,78 @@
   <div class="columns">
     <div class="column is-narrow-mobile">
       <div class="box has-background-info-light">
-        <p class="title is-4">Education</p>
-        <div
-          class="box has-background-dark"
+        <div>
+            <vue-skeleton-loader
+              v-if="show.titleEdu == false"
+              class="mx-auto my-2"
+              type="rect"
+              :width="150"
+              :height="40"
+              animation="fade"
+              :rounded="true"
+            />
+           <p v-else class="title is-4">Education</p>
+        </div>  
+          
+        <BoxEducation
           v-for="(education, index) in educations"
           :key="index"
-        >
-          <article class="media">
-            <div class="media-left">
-              <span class="icon is-medium mx-4 has-text-white"
-                ><font-awesome-icon :icon="['fa', 'graduation-cap']" size="2x"
-              /></span>
-              <h5 class="subtitle is-5 mt-2 has-text-white">
-                {{ education.date }}
-              </h5>
-            </div>
-
-            <div class="media-content">
-              <div class="content">
-                <h5 class="title is-5 has-text-primary-light">
-                  {{ education.type }} {{ education.name }}
-                </h5>
-                <h6 class="title is-6 has-text-primary-light">
-                  {{ education.major }}
-                </h6>
-              </div>
-            </div>
-          </article>
-        </div>
+          :education="education" />
       </div>
     </div>
+
     <div class="column is-narrow-mobile">
       <div class="box has-background-info-light">
-        <p class="title is-4">Experience</p>
-        <div
-          class="box has-background-dark"
-          v-for="(experience, index) in experiences"
-          :key="index"
-        >
-          <article class="media">
-            <div class="media-left">
-             <span class="icon is-medium mx-4 has-text-white"
-                ><font-awesome-icon :icon="['fa', 'briefcase']" size="2x"
-              /></span>
-              <h5 class="subtitle is-5 mt-2 has-text-white">
-                {{ experience.date }}
-              </h5>
-            </div>
-
-            <div class="media-content">
-              <div class="content">
-                <h5 class="title is-5 has-text-primary-light">
-                  {{experience.title}}
-                </h5>
-                <h6 class="title is-6 has-text-primary-light">
-                  {{ experience.position }}
-                </h6>
-              </div>
-            </div>
-          </article>
+        <div>
+          <vue-skeleton-loader
+            v-if="show.titleExp == false"
+            class="mx-auto my-2"
+            type="rect"
+            :width="150"
+            :height="40"
+            animation="fade"
+            :rounded="true"
+          />
+          <p v-else class="title is-4">Experience</p>
         </div>
+        
+        <BoxExperience v-for="(experience, index) in experiences"
+          :key="index"
+          :experience="experience" />
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import BoxEducation from "./BoxEducation";
+import BoxExperience from "./BoxExperience";
+
 export default {
   name: "TwoColumns",
+  components:{
+    BoxEducation,
+    BoxExperience
+  },
   props: {
     educations: Array,
     experiences: Array,
   },
+  data(){
+    return{
+      show:{
+        titleEdu:false,
+        titleExp:false,
+      }
+    }
+  },
+  created(){
+    setTimeout(()=>{
+      this.show.titleEdu = true
+      this.show.titleExp = true
+    },3000)
+  }
 };
 </script>
 
