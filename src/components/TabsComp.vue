@@ -1,9 +1,31 @@
 <template>
   <div>
     <div class="box my-2 has-background-light">
-      <p class="title is-5">Familiar with</p>
+      <div class="my-2">
+        <vue-skeleton-loader
+          v-if="show.title == false"
+          class="mx-auto my-2"
+          type="rect"
+          :width="200"
+          :height="40"
+          animation="fade"
+          :rounded="true"
+        />
+        <p v-else class="title is-5">Familiar with</p>
+      </div>
+      
       <div class="tabs is-toggle is-centered">
-        <ul>
+        <vue-skeleton-loader
+          v-if="show.tabs == false"
+          class="mx-auto my-2"
+          type="rect"
+          :width="550"
+          :height="100"
+          animation="fade"
+          :rounded="true"
+        />
+
+        <ul v-else>
           <li class="has-background-white" v-for="(skill, index) in skills" :key="index">
             <a>
                 <figure class="image is-64x64">
@@ -11,7 +33,6 @@
                     :src="skill.icon"
                     alt="Image"
                   /></figure>
-              <!-- <span>{{ skill.name }}</span> -->
             </a>
           </li>
         </ul>
@@ -26,6 +47,20 @@ export default {
   props: {
     skills: Array,
   },
+  data(){
+    return{
+      show:{
+        title:false,
+        tabs:false
+      }
+    }
+  },
+  created(){
+    setTimeout(()=>{
+      this.show.title = true
+      this.show.tabs = true
+    },3000)
+  }
 };
 </script>
 

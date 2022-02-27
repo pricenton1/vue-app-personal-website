@@ -32,6 +32,7 @@
     <CommonSection :about="person.about"/>
 
     <TwoColumns :educations="educations" :experiences="experiences" />
+    
     <TabsComp :skills="skills" />
   </div>
 </template>
