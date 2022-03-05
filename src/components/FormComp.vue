@@ -145,7 +145,6 @@ export default {
       if (this.nama === "") {
         this.error.nama = "Field name empty !!";
       }
-      
       if (this.email === "") {
         this.error.email = "Field email empty or invalid !!";
       }
@@ -158,7 +157,6 @@ export default {
         "https://script.google.com/macros/s/AKfycbzRmLvpN2IQ7dZOug8TFIpE-GpVoCkK7yQAb8c09wDUFIOtJkdn8Y_muVFrJCe-mOxF/exec";
       const form = document.forms["submit-to-google-sheet"];
 
-      // eslint-disable-next-line no-useless-escape
       if (this.nama && this.email && this.message) {
         this.loading = true;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })

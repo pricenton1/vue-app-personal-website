@@ -4,7 +4,7 @@
       <!-- <ColumnContent /> -->
       <MedSos />
       <div class="box mt-6">
-        <p>&copy; 2022 <a href="#">@mirasandyantony</a></p>
+        <p>&copy; 2022 <a href="#">@tonyKuy</a></p>
       </div>
     </div>
   </section>

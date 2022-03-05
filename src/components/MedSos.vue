@@ -13,7 +13,7 @@
 
     <div 
     v-else 
-    class="tabs is-toggle is-toggle-rounded is-centered"
+    class="tabs is-toggle is-toggle-rounded is-centered is-mobile"
     >
       <ul>
         <li>
@@ -85,4 +85,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+
+</style>

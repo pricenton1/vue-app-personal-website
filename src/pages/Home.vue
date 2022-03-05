@@ -1,22 +1,36 @@
 <template>
   <div>
+    <BgGradient v-if="showBg" class="bg-gradient" />
     <div class="container is-max-desktop">
-      <h1 class="title-anton" v-if="titleHome">{{titleHome}}</h1>
+      <!-- <h1 class="title-anton" v-if="titleHome">{{titleHome}}</h1> -->
+      <img
+        class=""
+        :src="require(`../assets/images/${imageTitle}`)"
+        :alt="imageTitle"
+        v-if="imageTitle"
+      />
       <!-- skeleton loading title -->
-      <vue-skeleton-loader v-else
-      class="mx-auto my-3"
-      type="rect"
-      :width="600"
-      :height="50"
-      animation="fade"
-      :rounded="true"
+      <vue-skeleton-loader
+        v-else
+        class="mx-auto my-3"
+        type="rect"
+        :width="600"
+        :height="50"
+        animation="fade"
+        :rounded="true"
       />
 
-      <div class="columns">
+      <div class="columns is-desktop">
         <div class="column"><CardProfile /></div>
         <div class="column">
-          <img class="ml-6 mt-6 " :src="require(`../assets/images/${image}`)" alt="image1" v-if="image" />
-          <vue-skeleton-loader v-else
+          <img
+            class=""
+            :src="require(`../assets/images/${image}`)"
+            alt="image1"
+            v-if="image"
+          />
+          <vue-skeleton-loader
+            v-else
             class="mx-auto"
             type="rect"
             :width="420"
@@ -34,6 +48,7 @@
 <script>
 // import "bulma/css/bulma.css";
 import CardProfile from "../components/CardProfile.vue";
+import BgGradient from "../components/svg/BgGradient.vue";
 
 export default {
   name: "Home",
@@ -42,29 +57,32 @@ export default {
   },
   components: {
     CardProfile,
+    BgGradient
   },
   data: function () {
     return {
-      titleHome:"",
-      image:""
+      imageTitle: "",
+      image: "",
+      showBg:false
     };
   },
-  methods:{
-    fadeTitle(){
-      setTimeout(()=>{
-        this.titleHome = "Welcome Minna-san..."
-      },3000);
+  methods: {
+    fadeTitle() {
+      setTimeout(() => {
+        this.imageTitle = "imageTitle.png";
+      }, 3000);
     },
-    getImage(){
-      setTimeout(()=>{
-        this.image = "image1.png"
-      },3000);
-    }
+    getImage() {
+      setTimeout(() => {
+        this.image = "image1.png";
+        this.showBg = true
+      }, 3000);
+    },
   },
-  mounted(){
+  mounted() {
     this.fadeTitle();
     this.getImage();
-  }
+  },
 };
 </script>
 
@@ -76,8 +94,21 @@ export default {
   font-size: 40px;
   letter-spacing: 4px;
 }
-.columns {
+/* .columns {
   height: 450px;
-  /* border: solid; */
+  border: solid;
+} */
+
+.bg-gradient{
+  position: absolute;
+  right: -5px;
+  top: 382px;
 }
+
+@media screen and (max-width: 750px){
+  .bg-gradient{
+    display: none;
+  }
+}
+
 </style>

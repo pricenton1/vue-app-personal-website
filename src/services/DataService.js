@@ -7,9 +7,5 @@ class DataService{
     }
 }
 
-// async function DataService(){
-//     const dataService = await httpCommon.get("/person");
-// }
-
 
 export default new DataService();

@@ -10,6 +10,7 @@
       msg="Welcome to Your Vue.js App"
       msg2="About"
     ></router-view>
+
     
     <Footer />
   </div>
@@ -22,6 +23,7 @@ import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
 
+
 export default {
   name: "App",
   components: {
@@ -29,6 +31,7 @@ export default {
     // Home,
     Navbar,
     Footer,
+   
   },
   data: function () {
     return {
@@ -38,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
