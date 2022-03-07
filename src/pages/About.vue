@@ -80,7 +80,6 @@ export default {
           this.educations = response.data.education;
           this.experiences = response.data.experience;
           this.skills = response.data.skills;
-          console.log("INI RESPONSE ", response.data);
         })
         .catch((e) => {
           console.log(e);

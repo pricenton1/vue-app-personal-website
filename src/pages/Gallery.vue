@@ -39,8 +39,6 @@ export default {
       DataService.getDataPerson()
         .then((response) => {
           this.activities = response.data.activities;
-          console.log("INI RESPONSE ", response.data);
-          console.log("INI ACTIVITY 2", this.activities)
         })
         .catch((e) => {
           console.log(e);

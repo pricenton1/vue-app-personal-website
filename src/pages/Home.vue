@@ -2,7 +2,6 @@
   <div>
     <BgGradient v-if="showBg" class="bg-gradient" />
     <div class="container is-max-desktop">
-      <!-- <h1 class="title-anton" v-if="titleHome">{{titleHome}}</h1> -->
       <img
         class=""
         :src="require(`../assets/images/${imageTitle}`)"
@@ -41,12 +40,10 @@
         </div>
       </div>
     </div>
-    <!-- <h1>{{ message }}</h1> -->
   </div>
 </template>
 
 <script>
-// import "bulma/css/bulma.css";
 import CardProfile from "../components/CardProfile.vue";
 import BgGradient from "../components/svg/BgGradient.vue";
 
@@ -94,10 +91,6 @@ export default {
   font-size: 40px;
   letter-spacing: 4px;
 }
-/* .columns {
-  height: 450px;
-  border: solid;
-} */
 
 .bg-gradient{
   position: absolute;

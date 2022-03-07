@@ -27,8 +27,6 @@ export default {
       DataService.getDataPerson()
         .then((response) => {
           this.portfolio = response.data.portfolio;
-          console.log("INI RESPONSE ", response.data);
-          console.log("INI PORTFOLIO", this.portfolio);
         })
         .catch((e) => {
           console.log(e);

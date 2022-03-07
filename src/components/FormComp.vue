@@ -1,4 +1,4 @@
-/* eslint-disable no-useless-escape */
+
 <template>
   <form
     class="box"
@@ -161,8 +161,8 @@ export default {
         this.loading = true;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            console.log("Success", response);
-
+            response.text = "Your message has been sent"
+            
             // alert if succcess 
             const Toast = Swal.mixin({
               toast: true,
@@ -178,7 +178,7 @@ export default {
 
             Toast.fire({
               icon: "success",
-              title: "Your message has been sent",
+              title: response.text
             });
             // reset form and button
             this.loading = false;
@@ -203,7 +203,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box {
-  width: 700px;
+
+@media screen and (min-width: 1024px){
+  .box{
+    width: 700px;
+  }
 }
+
 </style>
