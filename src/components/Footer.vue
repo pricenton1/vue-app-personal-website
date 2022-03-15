@@ -1,10 +1,10 @@
 <template>
   <section class="section has-background-dark p-1">
     <div class="content has-text-centered">
-      <!-- <ColumnContent /> -->
+   
       <MedSos />
       <div class="box mt-6">
-        <p>&copy; 2022 <a href="#">@tonyKuy</a></p>
+        <p>&copy; 2022 <a href="https://wa.me/08987876401?text=Hello%20Antony">@tonyKuy</a></p>
       </div>
     </div>
   </section>
@@ -12,13 +12,13 @@
 
 <script>
 import MedSos from "./MedSos.vue";
-// import ColumnContent from './ColumnContent.vue'
+
 
 export default {
   name: "Footer",
   components: {
     MedSos,
-    // ColumnContent,
+    
   },
   
 };

@@ -92,7 +92,7 @@ export default {
     navTimeOut() {
       setTimeout(() => {
         this.show = true;
-      }, 3000);
+      }, 2000);
     },
 
     showNav() {

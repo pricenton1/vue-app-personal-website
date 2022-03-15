@@ -155,6 +155,7 @@ export default {
       // url to submit google sheet
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzRmLvpN2IQ7dZOug8TFIpE-GpVoCkK7yQAb8c09wDUFIOtJkdn8Y_muVFrJCe-mOxF/exec";
+      
       const form = document.forms["submit-to-google-sheet"];
 
       if (this.nama && this.email && this.message) {
@@ -186,8 +187,27 @@ export default {
             this.email = "";
             this.message = "";
           })
-          .catch((error) => console.log("Error", error.message));
-        // form.reset();
+          // CATCH ERROR
+          .catch((error) => {
+            // alert if error
+            error.showMessage = "Server Internal Error"
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "error",
+              title: error.showMessage
+            });
+          });
       }
     },
   },

@@ -114,7 +114,6 @@ export default {
           this.person.firstname = response.data.firstname;
           this.person.lastname = response.data.lastname;
           this.person.image = response.data.image_person;
-          console.log("INI RESPONSE ", response.data);
         })
         .catch((e) => {
           console.log(e);
@@ -127,20 +126,12 @@ export default {
     setTimeout(()=>{
       this.getData();
       this.getAge();
-    },3000)
+    },2000)
   },
   mounted() {},
 };
 </script>
 
 <style>
-/* .card-image{
-    border: solid;
-} */
 
-/* .card {
-  margin-top: 10%;
-  height:300px ;
-  background: linear-gradient(140deg, rgba(255,255,255,0.48783263305322133) 58%, rgba(255,255,255,1) 68%, rgba(69,199,252,1) 100%);
-} */
 </style>

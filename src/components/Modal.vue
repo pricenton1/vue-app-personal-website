@@ -1,15 +1,15 @@
 <template>
-  <div class="modal">
+  <div class="modal is-active" role="dialog">
     <div class="modal-background"></div>
     <div class="modal-content">
       <div class="box">
-        <h3 class="title is-3 ">{{ activity.title }}</h3>
-        <h4 class="subtitle is-5 has-text-left my-1">Date : {{ activity.date }}</h4>
+        <h3 class="title is-3 ">{{ modalActivity.title }}</h3>
+        <h4 class="subtitle is-5 has-text-left my-1">Date : {{ modalActivity.date }}</h4>
         <figure class="image is-256x256 mx-2">
-          <img :src="activity.image" />
+          <img :src="modalActivity.image" />
         </figure>
         <h4 class="subtitle is-4 has-text-left">Description :</h4>
-        <h5 class="subtitle is-5 has-text-justified mx-2">{{activity.desc}}</h5>
+        <h5 class="subtitle is-5 has-text-justified mx-2">{{modalActivity.desc}}</h5>
       </div>
     </div>
 
@@ -25,19 +25,23 @@
 export default {
   name: "Modal",
   props: {
-    activity: Object,
+    showModalA:{
+      'default' : false
+    },
+    modalActivity: Object,
   },
   methods: {
     dateConvert() {
-      const d = new Date(this.activity.date);
-      this.activity.date = d.toDateString();
+      const d = new Date(this.modalActivity.date);
+      this.modalActivity.date = d.toDateString();
     },
     close() {
-      this.$emit("close");
+      // this.$emit("close");
+      this.$emit('update:showModalA');
     },
     created(){
-        this.dateConvert();
-    }
+
+    },
   },
 };
 </script>

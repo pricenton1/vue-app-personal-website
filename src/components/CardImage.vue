@@ -2,7 +2,7 @@
   <div>
     <vue-skeleton-loader
       v-if="show == false"
-      class="mx-auto"
+      class="mx-auto mt-1"
       type="rect"
       :width="300"
       :height="200"
@@ -10,17 +10,16 @@
       :rounded="true"
     />
 
-    <div class="box" v-else>
+    <div class="box my-1" v-else>
       <h6 class="title is-6">{{ activity.title }}</h6>
       <h6 class="subtitle is-6">{{ activity.date }}</h6>
       <figure class="image is-256x256 mx-2">
         <img :src="activity.image" />
       </figure>
-      <button class="button is-link is-light is-small is-responsive mt-1" @click="showModal">Read More...</button>
-      <!-- <a class="subtitle is-6 has-text-info" @click="showModal">Read More...</a> -->
+      <button class="button is-link is-light is-small is-responsive mt-1" @click="showModal(activity)">Read More...</button>
     </div>
 
-    <Modal id="detail-modal" :activity="activity" @close="closeModal" />
+    <Modal v-if="showModalA" :showModalA.sync="showModalA" :modalActivity="modalActivity" />
   </div>
 </template>
 
@@ -38,6 +37,8 @@ export default {
   data() {
     return {
       show: false,
+      showModalA:false,
+      modalActivity:{}
     };
   },
   methods: {
@@ -45,13 +46,9 @@ export default {
       const d = new Date(this.activity.date);
       this.activity.date = d.toDateString();
     },
-    showModal() {
-      const modal = document.getElementById("detail-modal");
-      modal.classList.add("is-active");
-    },
-    closeModal() {
-      const modal = document.getElementById("detail-modal");
-      modal.classList.remove("is-active");
+    showModal(activity) {
+      this.showModalA = true
+      this.modalActivity = activity
     },
   },
   created() {
@@ -70,4 +67,6 @@ figure img {
   height: 200px;
   cursor: pointer;
 }
+
+
 </style>

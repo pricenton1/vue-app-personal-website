@@ -20,8 +20,9 @@
         <div class="media-content">
           <div class="content">
             <h6 class="title is-6">{{ item.title }}</h6>
-            <p class="has-text-justified">
-              {{ item.desc }}
+            <p class="has-text-left">
+              <!-- {{ item.desc }}... -->
+              {{limitText}} ...
             </p>
           </div>
           <nav class="level is-mobile">
@@ -49,12 +50,19 @@ export default {
   data() {
     return {
       show: false,
+      limitText:""
     };
   },
+  methods:{
+    limitDesc(){
+      this.limitText = this.item.desc.substring(0,70)
+    }
+  },  
   created() {
     setTimeout(() => {
+      this.limitDesc();
       this.show = true;
-    }, 3000);
+    }, 2000);
   },
 };
 </script>
@@ -62,5 +70,6 @@ export default {
 <style lang="scss" scoped>
 .box {
   width: 300px;
+  height: 200px;
 }
 </style>
