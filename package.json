@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "16.14.0",
+    "npm": "8.1.2"
   },
   "scripts": {
     "serve": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
