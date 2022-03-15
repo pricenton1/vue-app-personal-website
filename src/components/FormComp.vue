@@ -49,8 +49,9 @@
         <div class="control">
           <input
             class="input is-info"
-            type="email"
+            type="text"
             name="email"
+            id="email"
             v-model="email"
             placeholder="Example@gmail.com"
           />
@@ -140,12 +141,13 @@ export default {
       this.error.nama = "";
       this.error.email = "";
       this.error.message = "";
-      
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
       // validation if input empty
       if (this.nama === "") {
         this.error.nama = "Field name empty !!";
       }
-      if (this.email === "") {
+      if (this.email === "" || !emailPattern.test(this.email) ) {
         this.error.email = "Field email empty or invalid !!";
       }
       if (this.message === "") {
@@ -158,7 +160,7 @@ export default {
       
       const form = document.forms["submit-to-google-sheet"];
 
-      if (this.nama && this.email && this.message) {
+      if (this.nama && this.email && emailPattern.test(this.email) && this.message) {
         this.loading = true;
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
@@ -217,7 +219,7 @@ export default {
       this.showEmail = true
       this.showMessage = true
       this.showButton = true
-    },3000)
+    },2000)
   }
 };
 </script>
