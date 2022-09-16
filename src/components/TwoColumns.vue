@@ -72,7 +72,7 @@ export default {
     setTimeout(()=>{
       this.show.titleEdu = true
       this.show.titleExp = true
-    },3000)
+    },1000)
   }
 };
 </script>

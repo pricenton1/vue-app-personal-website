@@ -219,7 +219,7 @@ export default {
       this.showEmail = true
       this.showMessage = true
       this.showButton = true
-    },2000)
+    },1000)
   }
 };
 </script>

@@ -59,7 +59,7 @@ export default {
     setTimeout(()=>{
       this.show.title = true
       this.show.tabs = true
-    },3000)
+    },1000)
   }
 };
 </script>

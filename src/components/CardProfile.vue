@@ -30,7 +30,7 @@
               {{ person.firstname }} {{ person.lastname }}
               </p>
               <p class="subtitle is-5 has-text-weight-semibold">
-                Software Engineer
+                Software Developer
               </p>
             </div>
             

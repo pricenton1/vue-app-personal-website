@@ -62,7 +62,7 @@ export default {
     setTimeout(() => {
       this.limitDesc();
       this.show = true;
-    }, 2000);
+    }, 1000);
   },
 };
 </script>

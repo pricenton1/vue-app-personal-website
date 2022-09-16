@@ -32,7 +32,7 @@ export default {
   created(){
     setTimeout(()=>{
       this.show = true
-    },3000)
+    },1000)
   }
 };
 </script>

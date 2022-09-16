@@ -91,7 +91,7 @@ export default {
     setTimeout(()=>{
       this.show.image = true
       this.show.fullname = true
-    },3000)
+    },1000)
     this.getData();
   }
 };

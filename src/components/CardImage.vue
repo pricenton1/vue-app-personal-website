@@ -55,7 +55,7 @@ export default {
     setTimeout(() => {
       this.getDate();
       this.show = true;
-    }, 3000);
+    }, 1000);
   },
   mounted() {},
 };

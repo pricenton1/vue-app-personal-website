@@ -67,13 +67,13 @@ export default {
     fadeTitle() {
       setTimeout(() => {
         this.imageTitle = "imageTitle.png";
-      }, 2000);
+      }, 1000);
     },
     getImage() {
       setTimeout(() => {
         this.image = "image1.png";
         this.showBg = true
-      }, 2000);
+      }, 1000);
     },
   },
   mounted() {
