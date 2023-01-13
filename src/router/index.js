@@ -12,32 +12,32 @@ Vue.use(VueRouter)
 
 const routes = [
     { 
-        path: '/', 
+        path: '/vue-app-personal-website/', 
         name:'Home',
         component: () => import("../pages/Home"),
     },
     { 
-        path: '/about',
+        path: '/vue-app-personal-website/about',
         name:'About',
         component: About 
     },
     { 
-        path: '/hello',
+        path: '/vue-app-personal-website/hello',
         name:'HelloWorld',
         component: HelloWorld 
     },
     {
-        path: '/gallery',
+        path: '/vue-app-personal-website/gallery',
         name: 'Gallery',
         component: Gallery
     },
     {
-        path: '/portfolio',
+        path: '/vue-app-personal-website/portfolio',
         name: 'Portfolio',
         component: Portfolio
     },
     {
-        path:'/contact',
+        path:'/vue-app-personal-website/contact',
         name:'Contact',
         component: Contact
     }

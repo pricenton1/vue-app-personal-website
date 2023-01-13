@@ -23,7 +23,7 @@
       <div class="navbar-menu" id="navMenu">
         <ul>
           <li>
-            <router-link to="/">
+            <router-link to="/vue-app-personal-website/">
               <span class="icon is-large">
                 <font-awesome-icon :icon="['fas', 'house-user']" />
               </span>
@@ -31,7 +31,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/gallery">
+            <router-link to="/vue-app-personal-website/gallery">
               <span class="icon is-large">
                 <font-awesome-icon :icon="['fas', 'photo-video']" />
               </span>
@@ -39,7 +39,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/portfolio">
+            <router-link to="/vue-app-personal-website/portfolio">
               <span class="icon is-large">
                 <font-awesome-icon :icon="['fas', 'bookmark']" />
               </span>
@@ -47,7 +47,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/contact">
+            <router-link to="/vue-app-personal-website/contact">
               <span class="icon is-large">
                 <font-awesome-icon :icon="['fas', 'phone-alt']" />
               </span>
@@ -55,7 +55,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/about">
+            <router-link to="/vue-app-personal-website/about">
               <span class="icon is-large">
                 <font-awesome-icon :icon="['fas', 'user']" />
               </span>
