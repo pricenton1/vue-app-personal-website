@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "https://json-data-profile.herokuapp.com",
+    baseURL: "https://outrageous-chrome-cucumber.glitch.me",
     headers: {
         "Content-type" : "application/json"
     }
