@@ -58,8 +58,7 @@
         </div>
 
         <div class="content" v-if="age">
-          I am {{ age }} years old, familiar with the programming language
-          golang and react js and vue js for application development<br />
+          I am {{ age }} years old, {{ person.bio }}<br />
           <a href="#">@tonyKuy</a>
           <br />
           <p class="subtitle is-4">Yoroshiku</p>
@@ -90,6 +89,7 @@ export default {
       person: {
         firstname: "",
         lastname: "",
+        bio:"",
         nationality: "",
         image: "",
       },
@@ -114,6 +114,7 @@ export default {
           this.person.firstname = response.data.firstname;
           this.person.lastname = response.data.lastname;
           this.person.image = response.data.image_person;
+          this.person.bio = response.data.bio;
         })
         .catch((e) => {
           console.log(e);

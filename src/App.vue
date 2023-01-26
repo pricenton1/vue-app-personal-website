@@ -7,7 +7,7 @@
       message="Hello Home"
       msg="Welcome to Your Vue.js App"
       msg2="About"
-    ></router-view>
+    />
 
     
     <Footer />

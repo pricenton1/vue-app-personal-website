@@ -40,7 +40,13 @@ const routes = [
         path:'/vue-app-personal-website/contact',
         name:'Contact',
         component: Contact
-    }
+    },
+    { 
+        path: '*', 
+        name:'Home',
+        component: () => import("../pages/Home"),
+    },
+    
   ]
 
 export default new VueRouter({
